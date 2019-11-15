@@ -17,3 +17,8 @@
 const Route = use('Route')
 
 Route.post('sessions', 'SessionController.store')
+
+// .apiOnly() -> It removes the endpoits edit and create. \o/
+Route.group(() => {
+  Route.resource('teams', 'TeamController').apiOnly()
+}).middleware('auth')
