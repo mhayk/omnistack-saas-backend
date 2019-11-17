@@ -26,3 +26,11 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+### Redis
+
+Run the following command to run redis server.
+
+```bash
+docker run --name redis -p 6379:6379 -d -t redis:alpine
+```
