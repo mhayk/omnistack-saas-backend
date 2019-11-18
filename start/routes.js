@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,7 @@
 const Route = use('Route')
 
 Route.post('sessions', 'SessionController.store')
+Route.post('users', 'UserController.store')
 
 // .apiOnly() -> It removes the endpoits edit and create. \o/
 Route.group(() => {
