@@ -21,6 +21,8 @@ Route.post('users', 'UserController.store').validator('User')
 
 // .apiOnly() -> It removes the endpoits edit and create. \o/
 Route.group(() => {
+  Route.get('roles', 'RoleController.index')
+
   Route.resource('teams', 'TeamController')
     .apiOnly()
     .validator(new Map([[['teams.store', 'teams.update'], ['Team']]]))
